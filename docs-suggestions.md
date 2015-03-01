@@ -1,10 +1,11 @@
-1. `[NSNumber numberWithInt:50]` 换成 `@50`？（Parse 英文文档全部用简写格式，中文仅有 1 处）
+1. 格式：
+  * `[NSNumber numberWithInt:50]` 换成 `@50`？（Parse 英文文档全部用简写格式，中文仅有 1 处）
   
    ```
   [query whereKey:@"wins" lessThan:[NSNumber numberWithInt:50]]
   ```
 
-2. 创建变量时，`*` 和变量名之间不加空格，乘法表达式加空格如：24 * 60 。
+  * 创建变量时，`*` 和变量名之间不加空格，乘法表达式加空格如：24 * 60 。
   ```
   AVQuery * query = [AVRelation reverseQuery:user.className relationKey:@"myLikes" childObject:post];
   ```
@@ -12,3 +13,14 @@
 3. Parse 文档新增：
    1. Parse also supports NSDate, NSData, and **NSNull**.
    2. 查询 - 用 NSPredicate 规定限制条件
+
+4. 疑问：
+   * `whereKeyExists` 用来查询具备某一**键集**条件的对象…… 原文是 If you want to retrieve objects that have a particular **key set**，但举例不是健集：`[query whereKeyExists:@"score"];`
+   * 
+   
+5. 词汇表：
+   ------------------
+   | built-in fields|内置字段|
+   ------------------
+6. 
+
