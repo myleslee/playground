@@ -1,4 +1,4 @@
-1. 查询比较中，`[NSNumber numberWithInt:50]` 换成 `@50`
+1. `[NSNumber numberWithInt:50]` 换成 `@50`？（Parse 英文文档全部用简写格式，中文仅有 1 处）
   
    ```
   [query whereKey:@"wins" lessThan:[NSNumber numberWithInt:50]]
