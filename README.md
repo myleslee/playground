@@ -10,3 +10,18 @@ test if github supports html tags
 hyper link to current folder [docs-suggestions.md(./)](./docs-suggestions.md);
 
 hyper link to current folder [docs-suggestions.md](docs-suggestions.md);
+
+
+| header  | header |
+| ------------- | ------------- |
+| built-in fields | 内置字段 |
+
+```md
+// not valid, without first header line
+| ------------- | ------------- |
+| no header table | no header table |
+```
+```markdown
+//not valid
+| no header table | no header table |
+```
