@@ -3,6 +3,7 @@
   
    ```
   [query whereKey:@"wins" lessThan:[NSNumber numberWithInt:50]]
+  [query whereKey:@"arrayKey" containsAllObjectsInArray:@[@2, @3, @4]]
   ```
 
   * 创建变量时，`*` 和变量名之间不加空格，乘法表达式加空格如：24 * 60 。
