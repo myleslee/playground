@@ -20,9 +20,12 @@
    * 
    
 5. 词汇表：
-   |built-in fields|内置字段|
-   |utility function|辅助方法|
-   |query|n.查询 v.检索|
+
+   | 原文  | 译文 |
+   | ------------- | ------------- |
+   | built-in fields | 内置字段 |
+   | utility function | 辅助方法 |
+   | query | n.查询 v.检索 |
 
 
 
