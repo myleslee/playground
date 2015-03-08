@@ -1,15 +1,16 @@
-1. 格式：
+1. 格式和措词：
   * `[NSNumber numberWithInt:50]` 换成 `@50`？（Parse 英文文档全部用简写格式，中文仅有 1 处）
   
    ```
   [query whereKey:@"wins" lessThan:[NSNumber numberWithInt:50]]
   [query whereKey:@"arrayKey" containsAllObjectsInArray:@[@2, @3, @4]]
   ```
-
   * 创建变量时，`*` 和变量名之间不加空格，乘法表达式加空格如：24 * 60 。
+  
   ```
   AVQuery * query = [AVRelation reverseQuery:user.className relationKey:@"myLikes" childObject:post];
   ```
+  * 账户 √ 帐户 x
   
 3. Parse 文档新增：
    - Parse also supports NSDate, NSData, and **NSNull**.
