@@ -11,6 +11,7 @@
   AVQuery * query = [AVRelation reverseQuery:user.className relationKey:@"myLikes" childObject:post];
   ```
   * 账户 √ 帐户 x
+    LeanCloud 账户中的「数据管理」页面
   
 3. Parse 文档新增：
    - Parse also supports NSDate, NSData, and **NSNull**.
