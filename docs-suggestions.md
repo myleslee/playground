@@ -31,6 +31,7 @@
    | block | block |
    | AND | [逻辑运算符](https://msdn.microsoft.com/zh-cn/library/ms189773.aspx) |
    | dot notation |  点操作符、点语法 |
+   | Primitive property types | 原始属性类型 |
 
 
 
