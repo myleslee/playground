@@ -37,4 +37,6 @@
 
 6. 20150416 - double spaces can be taken as linebreak (MD)
 7. 深圳华强北 Hua Qiang Bei 
+8. 替换变量用 大_写_字_母 加下划线表示，并加注释：  
+  `cd $PROJECT_ROOT_DIR    # 请将 $PROJECT_ROOT_DIR 替换为你自己的项目根目录`
 
