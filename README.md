@@ -25,3 +25,34 @@ hyper link to current folder [docs-suggestions.md](docs-suggestions.md);
 //not valid
 | no header table | no header table |
 ```
+
+```
+├── Build
+│   ├── Intermediates
+│   │   ├── ArchiveIntermediates
+│   │   │   └── LeanTicket
+│   │   │   │   ├── BuildProductsPath
+│   │   │   │   │   └── Release-iphoneos
+│   │   │   │   │   ├── LeanTicket.app -> /Users/fengjunwen/Library/Developer/Xcode/DerivedData/LeanTicket-dkvwhbscbgyeoldhsxxzmorfqmyf/Build/Intermediates/ArchiveIntermediates/LeanTicket/InstallationBuildProductsLocation/Applications/LeanTicket.app
+│   │   │   │   │   └── LeanTicket.app.dSYM
+│   │   │   │   │   │   └── Contents
+│   │   │   │   │   │   ├── Info.plist
+│   │   │   │   │   │   └── Resources
+│   │   │   │   │   │   │   └── DWARF
+│   │   │   │   │   │   │   │   └── LeanTicket
+
+├── Build
+    ├── Intermediates
+        ├── ArchiveIntermediates
+            └── LeanTicket
+                ├── BuildProductsPath
+                    └── Release-iphoneos
+                    ├── LeanTicket.app -> /Users/fengjunwen/Library/Developer/Xcode/DerivedData/LeanTicket-dkvwhbscbgyeoldhsxxzmorfqmyf/Build/Intermediates/ArchiveIntermediates/LeanTicket/InstallationBuildProductsLocation/Applications/LeanTicket.app
+                    └── LeanTicket.app.dSYM
+                        └── Contents
+                        ├── Info.plist
+                        └── Resources
+                            └── DWARF
+                                └── LeanTicket
+```
+
