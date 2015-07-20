@@ -109,6 +109,13 @@ AND | [逻辑运算符](https://msdn.microsoft.com/zh-cn/library/ms189773.aspx) 
 dot notation |点操作符、点语法 |
 Primitive property types| 原始属性类型|
 
+## 惯用词
+推荐|不推荐|备注
+:---|:---|:---
+LeanCloud 云端|LeanCloud 服务端|
+app|App、APP|参考 Parse 英文文档
+控制台|后台|
+
 ## 其他
 - 20150416 - double spaces can be taken as linebreak (MD)
 - 深圳华强北 Hua Qiang Bei 
@@ -117,4 +124,4 @@ Primitive property types| 原始属性类型|
    信息 `X-AVOSCloud-Session-Token: <sessionToken>`，该 `sessionToken` 在用户登录或注册时服务端会返回
 
 
-
+链接文字与链接相同，使用 `<link>` ，而非 `[link](link)` 这种繁琐的语法。邮件地址使用 `<email_address>`
