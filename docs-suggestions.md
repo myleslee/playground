@@ -118,6 +118,8 @@ ${已知任务 ID}、
 {{id}}
 /1.1/resetPasswordBySmsCode/&lt;code&gt;
 $PROJECT_DIR
+
+[AVOSCloudSNS setupPlatform:AVOSCloudSNSSinaWeibo withAppKey:@"Weibo APP ID" andAppSecret:@"Weibo APP KEY" andRedirectURI:@""];
 ```
 
 
