@@ -61,3 +61,7 @@ views/leanengine_guide.tmpl
 
 
 [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links]
+
+1. [./start.html](./start.html)
+2. [start.html](start.html)
+3. [/start.html](/start.html)
