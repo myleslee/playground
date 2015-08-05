@@ -26,13 +26,12 @@
 - 外部链接
 - 《文章》
 
-单聊的情景相对也是比较简单的，用户可以选择向任何人发送相应的消息。如果应用开启 [签名认证](https://leancloud.cn/docs/realtime.html#%E6%9D%83%E9%99%90%E5%92%8C%E8%AE%A4%E8%AF%81)，
+```单聊的情景相对也是比较简单的，用户可以选择向任何人发送相应的消息。如果应用开启 [签名认证](https://leancloud.cn/docs/realtime.html#%E6%9D%83%E9%99%90%E5%92%8C%E8%AE%A4%E8%AF%81)，```
 
-链接深度用法
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
+#### 链接深度用法
+<https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links>
 
 
-单聊的情景相对也是比较简单的，用户可以选择向任何人发送相应的消息。如果应用开启 [签名认证](https://leancloud.cn/docs/realtime.html#%E6%9D%83%E9%99%90%E5%92%8C%E8%AE%A4%E8%AF%81)，
 
 #### 锚点链接
 
