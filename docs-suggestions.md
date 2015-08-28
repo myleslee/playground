@@ -192,3 +192,6 @@ app|App、APP|参考 Parse 英文文档
 
 是 h3 标题还是加粗问话？
 
+```<div class="callout callout-info">蓝色外框</div>```
+<img width="849" alt="screen shot 2015-08-28 at 17 35 31" src="https://cloud.githubusercontent.com/assets/108758/9543430/5a916eac-4dab-11e5-8164-65fec24d2e9a.png">
+
