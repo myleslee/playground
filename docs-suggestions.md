@@ -133,6 +133,8 @@ ${已知任务 ID}、
 $PROJECT_DIR
 
 [AVOSCloudSNS setupPlatform:AVOSCloudSNSSinaWeibo withAppKey:@"Weibo APP ID" andAppSecret:@"Weibo APP KEY" andRedirectURI:@""];
+
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-{版本号}.js"></script>
 ```
 
 
