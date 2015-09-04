@@ -188,6 +188,7 @@ Primitive property types| 原始属性类型|
 LeanCloud 云端|LeanCloud 服务端|
 app|App、APP|参考 Parse 英文文档
 控制台|后台|
+APNs|APNS|[Apple Push Notification service (APNs for short)](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html)
 
 ## 其他
 - 20150416 - double spaces can be taken as linebreak (MD)
