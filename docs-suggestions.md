@@ -26,7 +26,6 @@
 - 外部链接
 - 《文章》
 
-```单聊的情景相对也是比较简单的，用户可以选择向任何人发送相应的消息。如果应用开启 [签名认证](https://leancloud.cn/docs/realtime.html#%E6%9D%83%E9%99%90%E5%92%8C%E8%AE%A4%E8%AF%81)，```
 
 #### 链接深度用法
 <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links>
@@ -54,9 +53,17 @@ LeanCloud 简介|`#LeanCloud_简介`
 
 注意：标题在一文中出现多次，要更新引用
 
-Anchor 大小写敏感
+##### 大小写敏感
 
 /docs/realtime_v2.html#web_hook
+
+##### 不要 escape
+
+```单聊的情景相对也是比较简单的，用户可以选择向任何人发送相应的消息。如果应用开启 [签名认证](https://leancloud.cn/docs/realtime.html#%E6%9D%83%E9%99%90%E5%92%8C%E8%AE%A4%E8%AF%81)，```
+
+更新比较麻烦：用 Find 全文搜索
+
+push_guide.html#%E8%B7%9F%E8%B8%AA-android-%E6%8E%A8%E9%80%81%E5%92%8C-app-%E7%9A%84%E6%89%93%E5%BC%80%E6%83%85%E5%86%B5 
 
 ### 列表
 
