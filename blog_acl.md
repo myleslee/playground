@@ -69,9 +69,9 @@ ACL 全称为 Access Control List，维基百科解释为：
 
 关于 ACL 的深入使用，我们还编写好了详细的开发指南，欢迎围观。
 
-- 《ACL 快速入门：[iOS](https://leancloud.cn/docs/acl_quick_start-ios.html) | [Android](https://leancloud.cn/docs/acl_quick_start-android.html) | [JavaScript](https://leancloud.cn/docs/acl_quick_start-js.html)》
+- 《ACL 快速入门：[iOS](https://leancloud.cn/docs/acl_quick_start-ios.html) | [Android](https://leancloud.cn/docs/acl_quick_start-android.html) | [JavaScript](https://leancloud.cn/docs/acl_quick_start-js.html)》  
   讲述了 ACL 原理和使用的必要性
-- 《权限管理使用指南：[iOS](https://leancloud.cn/docs/acl_guide-ios.html) | [Android](https://leancloud.cn/docs/acl_guide-android.html) | [JavaScript](https://leancloud.cn/docs/acl_guide-js.html)》
+- 《权限管理使用指南：[iOS](https://leancloud.cn/docs/acl_guide-ios.html) | [Android](https://leancloud.cn/docs/acl_guide-android.html) | [JavaScript](https://leancloud.cn/docs/acl_guide-js.html)》  
   ACL 的具体使用细则和代码示例
 
 最后，作为开发者永远的小伙伴，LeanCloud 在此向你温馨提示：
