@@ -160,6 +160,16 @@ ${timestamp} 触发推送的时间戳（Unix 时间戳）
 
 ## 措词
   * `[NSNumber numberWithInt:50]` 换成 `@50`？（Parse 英文文档全部用简写格式，中文仅有 1 处）
+
+## 其他
+
+```
+$ git clone git@github.com:leancloud/node-js-getting-started.git
+$ git clone https://github.com/leancloud/node-js-getting-started.git
+$ cd node-js-getting-started
+```
+把所有的仓库地址都改成 https 的，不然没配置 Github 私钥就没法下载（要密码）
+
   
    ```
   [query whereKey:@"wins" lessThan:[NSNumber numberWithInt:50]]
