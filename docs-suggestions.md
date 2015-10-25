@@ -148,6 +148,8 @@ $PROJECT_DIR
 <script src="https://cdn1.lncld.net/static/js/av-core-mini-{版本号}.js"></script>
 
 ${timestamp} 触发推送的时间戳（Unix 时间戳）
+如果想查询某个矩形框内的对象，可以使用 `within [西南坐标] and [东北坐标]` 的语法：
+
 ```
 
 
