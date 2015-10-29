@@ -3,6 +3,34 @@
 
 ## Cheat Sheet
 
+- 层级菜单使用 `>` 分隔，不要用 `--`、`->` 或其他字符。
+- 屏幕文字或菜单使用粗体字，不要当成代码来标注：进入 `控制台` -- `存储` -- `云引擎`。
+- 图片放在 /image 下，不要上传到七牛，这样也好维护。
+- 文件夹和文件名不用 `代码块` 来表示，必要时可以加粗。
+- 虽然有「千言万语不及一幅画」的说法，但如果图片可以用简短的文字描述清楚，尽量用文字，好处：
+  - 对搜索引擎友好
+  - 屏幕内容可能发生变化，但无法以文字方式搜索到或替换，难以及时更新
+  - 文字加载比图片快
+  - 节省流量和存储字节
+
+## Markdown 增强
+
+- TABLE
+  - 无法区分 thead，样式不明显
+  - 无法使用 nowrap，文字挤在一起或错行，很不美观   
+  - 必须要表头
+  - 无开口 table 样式
+  - 单元格内不能内嵌列表，只能用
+- 不支持 attributes（如 class/style）等
+- 不支持 - [X] 列表
+
+Class 中的 function：方法/method
+之外的为 function：函数
+hook 
+block
+
+
+
 1. ```[应用控制台](/applist.html#/apps)```
 2. 表格
   ```
@@ -140,7 +168,7 @@ type|String|必须|`"text"`|
 var id = '<已知任务 id>'; 
 ${已知任务 ID}、
 {{id}}
-/1.1/resetPasswordBySmsCode/&lt;code&gt;
+/1.1/resetPasswordBySmsCode/:code
 $PROJECT_DIR
 
 [AVOSCloudSNS setupPlatform:AVOSCloudSNSSinaWeibo withAppKey:@"Weibo APP ID" andAppSecret:@"Weibo APP KEY" andRedirectURI:@""];
@@ -149,16 +177,30 @@ $PROJECT_DIR
 
 ${timestamp} 触发推送的时间戳（Unix 时间戳）
 如果想查询某个矩形框内的对象，可以使用 `within [西南坐标] and [东北坐标]` 的语法：
-
+PHP 安装：将压缩文件解压并置于项目文件夹下，如 $APP_ROOT/vendor/leancloud
 ```
 
 
 对单引号和双引号不做要求
 
-列表项目后的
-标点：；和 。
+- 列表项目后的标点：；和 。
+- 顿号
+
+## 常见错别字
+错误|正确|解释
+---|---|---
+登陆|登陆|
+帐户|账户|
+做为|作为|
+
+
 `fetch` 系方法 fetchXXX
+`orderBy...`
+
+
 缩写
+
+
 
 ## 措词
   * `[NSNumber numberWithInt:50]` 换成 `@50`？（Parse 英文文档全部用简写格式，中文仅有 1 处）
@@ -225,8 +267,14 @@ JSON|json|<http://json.org/>
 
 ## 常见问题
 
-是 h3 标题还是加粗问话？
+FAQ 中的提问：用 h3 标题还是加粗？
 
 ```<div class="callout callout-info">蓝色外框</div>```
 <img width="849" alt="screen shot 2015-08-28 at 17 35 31" src="https://cloud.githubusercontent.com/assets/108758/9543430/5a916eac-4dab-11e5-8164-65fec24d2e9a.png">
+
+
+## 待解决问题
+
+- 如何在本地浏览 API 文档（localhost:3000 映射为 /dist，而 /api 与其在同一级目录）
+
 
