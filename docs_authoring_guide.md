@@ -3,15 +3,17 @@
 
 ## Cheat Sheet
 
+- `<br>` 用**两个空格**代替。
 - 层级菜单使用 `>` 分隔，不要用 `--`、`->` 或其他字符。
 - 屏幕文字或菜单使用粗体字，不要当成代码来标注：进入 `控制台` -- `存储` -- `云引擎`。
-- 图片放在 /image 下，不要上传到七牛，这样也好维护。
-- 文件夹和文件名不用 `代码块` 来表示，必要时可以加粗。
+- 图片放在 **/images** 下，不要上传到七牛，这样也好维护，也省钱。
+- 文件夹/目录、文件名不用 `代码块` 来表示，必要时可以加粗。
 - 虽然有「千言万语不及一幅画」的说法，但如果图片可以用简短的文字描述清楚，尽量用文字，好处：
   - 对搜索引擎友好
   - 屏幕内容可能发生变化，但无法以文字方式搜索到或替换，难以及时更新
   - 文字加载比图片快
   - 节省流量和存储字节
+- 对勾 &check;（`&check;`），`- [x]` 可表示为【&check;】 
 
 ## Markdown 增强
 
@@ -22,7 +24,7 @@
   - 无开口 table 样式
   - 单元格内不能内嵌列表，只能用
 - 不支持 attributes（如 class/style）等
-- 不支持 - [X] 列表
+- 不支持 `- [X]` 列表
 
 Class 中的 function：方法/method
 之外的为 function：函数
@@ -164,6 +166,7 @@ type|String|必须|`"text"`|
 系统变量有三个：appid、appkey、masterkey。
 
 ```
+// 初始化参数依次为 this, AppId, AppKey
 {{appid}}  //你的 App Id、
 var id = '<已知任务 id>'; 
 ${已知任务 ID}、
@@ -178,6 +181,13 @@ $PROJECT_DIR
 ${timestamp} 触发推送的时间戳（Unix 时间戳）
 如果想查询某个矩形框内的对象，可以使用 `within [西南坐标] and [东北坐标]` 的语法：
 PHP 安装：将压缩文件解压并置于项目文件夹下，如 $APP_ROOT/vendor/leancloud
+
+├── avoscloud-feedback-{version-number}.zip     // LeanCloud 用户反馈模块
+├── avoscloud-sns-{version-number}.zip          // LeanCloud SNS 模块
+├── <YOUR-APP-NAME>.iml 
+
+AVOSCloud.requestSMSCodeInBackground(AVUser.getCurrentUser().getMobilePhoneNumber(), "某应用", "具体操作名称", 10, new RequestMobileCodeCallback() {
+AV.User.verifyMobilePhone('6位数字验证码').then(function(){
 ```
 
 
@@ -198,6 +208,8 @@ PHP 安装：将压缩文件解压并置于项目文件夹下，如 $APP_ROOT/ve
 `orderBy...`
 
 
+
+
 缩写
 
 
@@ -215,15 +227,16 @@ $ cd node-js-getting-started
 把所有的仓库地址都改成 https 的，不然没配置 Github 私钥就没法下载（要密码）
 
   
-   ```
+```
   [query whereKey:@"wins" lessThan:[NSNumber numberWithInt:50]]
   [query whereKey:@"arrayKey" containsAllObjectsInArray:@[@2, @3, @4]]
-  ```
+```
   * 创建变量时，`*` 和变量名之间不加空格，乘法表达式加空格如：24 * 60 。
   
-  ```
+```
   AVQuery * query = [AVRelation reverseQuery:user.className relationKey:@"myLikes" childObject:post];
-  ```
+
+```
   * 账户 √ 帐户 x
     LeanCloud 账户中的「数据管理」页面
   
@@ -278,3 +291,8 @@ FAQ 中的提问：用 h3 标题还是加粗？
 - 如何在本地浏览 API 文档（localhost:3000 映射为 /dist，而 /api 与其在同一级目录）
 
 
+## 常用 HTML Entity
+
+符号|Code
+---|---
+&check;|`&check;`
