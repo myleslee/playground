@@ -287,10 +287,16 @@ FAQ 中的提问：用 h3 标题还是加粗？
 ```<div class="callout callout-info">蓝色外框</div>```
 <img width="849" alt="screen shot 2015-08-28 at 17 35 31" src="https://cloud.githubusercontent.com/assets/108758/9543430/5a916eac-4dab-11e5-8164-65fec24d2e9a.png">
 
+- 「的、地、得」用法
+  - 的：名词前【例】
+  - 地：动词前【例】认认真真地写
+  - 得：动词/形容词**后**【例】看得清清楚楚、白得刺眼、关系处理得很好
 
 ## 待解决问题
 
 - 如何在本地浏览 API 文档（localhost:3000 映射为 /dist，而 /api 与其在同一级目录）
+- 过期文档移动到 /archive 目录中，更新搜索 index，也减少 overhead from parsing MD files
+- 
 
 
 ## 常用 HTML Entity
