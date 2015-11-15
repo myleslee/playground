@@ -3,6 +3,7 @@
 ## 内容
 
 - 订阅更新
+- 手工定位锚点，不一定是标题，中英文均可：`<a id="customize_notification_for_offline_message" data-author="2015-11-15@myleslee@Da Li">`
 
 ## 结构重构
 
@@ -32,8 +33,14 @@
 - 加粗中的代码不要加粗：**加粗的中文与加粗的代码 `thisFunction()` 混合在一起**。 
 - 图片加外边框。
 - 代码块：底色（乱）、行号、指定行加亮
+- inline-note、shy:
+- External links
+- External Reference: floating right 
 
 
+```
+$ avoscloud add <APP-NAME> <APP-ID>
+```
 
 ```
 2015-10-12T02:04:50.179Z    dreday  将逻辑放到前端： 1 如果android，ios，web都有的话，一个逻辑做三份，严重加大了前端程序员负担 2 三个接口无法统一 3 后期逻辑更改必须重新上线

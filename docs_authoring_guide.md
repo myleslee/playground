@@ -3,12 +3,16 @@
 
 ## Cheat Sheet
 
-- `<br>` 用**两个空格**代替。
-- 列表标题**加粗**，后接全解冒号 `：` 号，与后面的文字隔开；如想单独成行，将冒号改为两个空格。
-- 
+- 软回车使用 `<br>`，不要用**两个空格**代替。
+  但由于编辑器的个人设置不同，如 Sublime Text（"trim_trailing_white_space_on_save": true）会在保存时将空白移除，这样会造成版式混乱。
+- 列表：标题**加粗**，后接全解冒号 `：` 号，与后面的文字隔开；如想单独成行，将冒号改为 `<br/>`。
+- 标题
+  - 各级标题的 # 与文字之间加一个空格，与下面的正文内容隔一个空行。
 - 层级菜单使用 `>` 分隔，不要用 `--`、`->` 或其他字符。
+  - 说明文字使用 CSS class `note` 来标注：` **控制台** ><span class="note">（选择一个应用）</span>>**存储** > **云引擎**<span class="note">（屏幕左侧）</span>`，效果为：<br/>
+  **控制台** ><span class="note" style="color:#999">（选择一个应用）</span>>**存储** > **云引擎**<span class="note">（屏幕左侧）</span>
 - 屏幕文字或菜单使用粗体字，不要当成代码来标注：进入 `控制台` -- `存储` -- `云引擎`。
-- 图片放在 **/images** 下，不要上传到七牛，这样也好维护，也省钱。
+- 图片放在 **/images** 下，不要上传到七牛，一来便于维护，二来我们不用付费。
 - 文件夹/目录、文件名不用 `代码块` 来表示，必要时可以加粗。
 - 虽然有「千言万语不及一幅画」的说法，但如果图片可以用简短的文字描述清楚，尽量用文字，好处：
   - 对搜索引擎友好
@@ -16,6 +20,10 @@
   - 文字加载比图片快
   - 节省流量和存储字节
 - 对勾 &check;（`&check;`），`- [x]` 可表示为【&check;】 
+- 外部链接：
+  - 本站点链接：文档标题 + 中间点 + 锚点描述
+    [iOS 推送指南 &middot; 清除 badge](ios_push_guide.html#清除_Badge)
+  - 外部站点：`<div class="reference"></div>`
 
 ## Markdown 增强
 
@@ -45,14 +53,14 @@ block
   ---|---|---|---|---
   &nbsp;&nbsp;&nbsp;&nbsp; a||||
   ```
-3. 
+ 
 ## 格式
 
-### 超链接
+### 链接
 
-链接文字与链接相同，使用 `<link>` ，而非 `[link](link)` 这种繁琐的语法。邮件地址使用 `<email_address>`
+链接文字与链接相同，使用 `<link>` ，而非 `[link](link)` 这种繁琐的语法。邮件地址也使用 `<email_address>`
 
-- 内部链接：章节引用[查询 - 条件查询 - 约束](#约束)
+- 内部链接：章节引用[查询 &middot; 条件查询 &middot; 约束](#约束)，或者 [查询 / 条件查询 / 约束](#约束)
 - 不建议使用「请参考 [这里](./a.html)」、请参考 [这篇文章](./a.html)」这样泛泛的表达方式。缺点：
   - 如果链接失效，读者对引用的内容毫无头绪。如果加上具体内容，如文章题目，即使链接失效，读者可依据这一线索到搜索引擎里搜索。
 - 外部链接
@@ -61,8 +69,6 @@ block
 
 #### 链接深度用法
 <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links>
-
-
 
 #### 锚点链接
 
@@ -89,7 +95,7 @@ LeanCloud 简介|`#LeanCloud_简介`
 
 /docs/realtime_v2.html#web_hook
 
-##### 不要 escape
+##### 不要用 URL-Encoded 格式
 
 ```单聊的情景相对也是比较简单的，用户可以选择向任何人发送相应的消息。如果应用开启 [签名认证](https://leancloud.cn/docs/realtime.html#%E6%9D%83%E9%99%90%E5%92%8C%E8%AE%A4%E8%AF%81)，```
 
@@ -166,6 +172,14 @@ type|String|必须|`"text"`|
 ## 变量
 
 系统变量有三个：appid、appkey、masterkey。
+- appname？
+  /docs/views/leanengine_guide-python.md
+  `$ avoscloud add <appName> <appId>`
+- 变量默认值
+  未登录时显示为：`<APP-ID>`
+  <APP-ID-登录控制台后可自动填充>
+  >"X-LC-Key: ,master"这个参数怎么设置啊？不像键值对啊，没看过这种形似的参数
+  >原文：`curl -X POST \ -H "X-LC-Id: {{appid}}" \ -H "X-LC-Key: {{masterkey}},master" \`
 
 ```
 // 初始化参数依次为 this, AppId, AppKey
@@ -201,7 +215,7 @@ AV.User.verifyMobilePhone('6位数字验证码').then(function(){
 ## 常见错别字
 错误|正确|解释
 ---|---|---
-登陆|登陆|
+登陆|登录|
 帐户|账户|
 做为|作为|
 
@@ -209,12 +223,7 @@ AV.User.verifyMobilePhone('6位数字验证码').then(function(){
 `fetch` 系方法 fetchXXX
 `orderBy...`
 
-
-
-
 缩写
-
-
 
 ## 措词
   * `[NSNumber numberWithInt:50]` 换成 `@50`？（Parse 英文文档全部用简写格式，中文仅有 1 处）
@@ -227,7 +236,6 @@ $ git clone https://github.com/leancloud/node-js-getting-started.git
 $ cd node-js-getting-started
 ```
 把所有的仓库地址都改成 https 的，不然没配置 Github 私钥就没法下载（要密码）
-
   
 ```
   [query whereKey:@"wins" lessThan:[NSNumber numberWithInt:50]]
@@ -263,15 +271,19 @@ block | block|iOS，不用翻译
 AND | [逻辑运算符](https://msdn.microsoft.com/zh-cn/library/ms189773.aspx) |
 dot notation |点操作符、点语法 |
 Primitive property types| 原始属性类型|
+dev|开发（证书）
+
 
 ## 惯用词
 推荐|不推荐|备注
 :---|:---|:---
 LeanCloud 云端|LeanCloud 服务端|
-app|App、APP|参考 Parse 英文文档
+应用|app、App、APP|参考 Parse 英文文档
 控制台|后台|
 APNs|APNS|[Apple Push Notification service (APNs for short)](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html)
 JSON|json|<http://json.org/>
+开发证书|测试证书|vs. 生产证书
+
 
 ## 其他
 - 20150416 - double spaces can be taken as linebreak (MD)
@@ -296,11 +308,17 @@ FAQ 中的提问：用 h3 标题还是加粗？
 
 - 如何在本地浏览 API 文档（localhost:3000 映射为 /dist，而 /api 与其在同一级目录）
 - 过期文档移动到 /archive 目录中，更新搜索 index，也减少 overhead from parsing MD files
-- 
-
 
 ## 常用 HTML Entity
 
-符号|Code
----|---
-&check;|`&check;`
+符号|Code|说明
+---|---|---
+&check;|`&check;`|
+&middot;|`&middot;`|标注文章的层次，如：[iOS 推送指南 &middot; 清除 badge](ios_push_guide.html#清除_Badge)
+
+
+## 替换
+
+Find|Replace|Find RE|Replace RE
+---|---|---|---
+##标题|## 标题|`(#{2,6})([^\s|#].)`|`\1 \2`
