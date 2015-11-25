@@ -3,15 +3,18 @@
 
 ## Cheat Sheet
 
+- `<span style="white-space: nowrap;">`
+- 中文不要用斜体（三个 *），表示强调用 **粗体** 和 <span style="text-decoration:'underline';">下划线</u>。
 - 软回车使用 `<br>`，不要用**两个空格**代替。<br/>
   由于编辑器的个人设置不同，如 Sublime Text（`"trim_trailing_white_space_on_save": true`）会在保存时将空白移除，这样会造成版式混乱。
-- 列表：标题**加粗**，后接全角冒号 `：` 号，与后面的文字隔开；如想单独成行，将冒号改为 `<br/>`。
+- 列表：标题**加粗**，后接 `：` （全角冒号），与后面的文字隔开；如想单独成行，将冒号改为 `<br/>`。
 - 标题
   - 各级标题的 # 与文字之间加一个空格，与下面的正文内容隔一个空行。
 - 层级菜单使用 `>` 分隔，不要用 `--`、`->` 或其他字符。
-  - 说明文字使用 CSS class `note` 来标注：` **控制台** ><span class="note">（选择一个应用）</span>>**存储** > **云引擎**<span class="note">（屏幕左侧）</span>`，效果为：<br/>
-  **控制台** ><span class="note" style="color:#999">（选择一个应用）</span>> **存储** > **云引擎**<span class="note">（屏幕左侧）</span><br/>
-  **控制台** /<span class="note" style="color:#999">（选择一个应用）</span>/ **存储** / **云引擎**<span class="note">（屏幕左侧）</span>
+  - 说明文字使用 CSS class `note` 来标注：<br/>
+    ` **控制台** ><span class="note">（选择一个应用）</span>>**存储** > **云引擎**<span class="note">（屏幕左侧）</span>`
+  - **控制台** ><span class="note" style="color:#999;">（选择一个应用）</span>> **存储** > **云引擎**<span class="note">（屏幕左侧）</span><br/>
+  - **控制台** /<span class="note" style="color:#999;">（选择一个应用）</span>/ **存储** / **云引擎**<span class="note">（屏幕左侧）</span>
 - 屏幕文字或菜单使用粗体字，不要当成代码来标注：进入 `控制台` -- `存储` -- `云引擎`。
 - 图片放在 **/images** 下，不要上传到七牛，一来便于维护，二来我们不用付费。
 - 文件夹/目录、文件名不用 `代码块` 来表示，必要时可以加粗。
@@ -22,12 +25,14 @@
   - 节省流量和存储字节
 - 对勾 &check;（`&check;`），`- [x]` 可表示为【&check;】 
 - 外部链接：
-  - 本站点链接：文档标题 + 中间点 + 锚点描述
+  - 本站点链接：文档标题 + 中间点 + 锚点描述<br/>
     [iOS 推送指南 &middot; 清除 badge](ios_push_guide.html#清除_Badge)
   - 外部站点：`<div class="reference"></div>`
+- 代码块使用 \``` 或 \`` 来组织，不要使用 tab 或 空格。
+- AVObject 不要标为代码。
 
 ## Markdown 增强
-
+- 加一些 html 属性，如 class、column width
 - TABLE
   - 无法区分 thead，样式不明显
   - 无法使用 nowrap，文字挤在一起或错行，很不美观   
@@ -205,6 +210,8 @@ PHP 安装：将压缩文件解压并置于项目文件夹下，如 $APP_ROOT/ve
 
 AVOSCloud.requestSMSCodeInBackground(AVUser.getCurrentUser().getMobilePhoneNumber(), "某应用", "具体操作名称", 10, new RequestMobileCodeCallback() {
 AV.User.verifyMobilePhone('6位数字验证码').then(function(){
+
+var client = require('redis').createClient(process.env['REDIS_URL_<实例名称>']);  
 ```
 
 
@@ -225,6 +232,17 @@ AV.User.verifyMobilePhone('6位数字验证码').then(function(){
 `orderBy...`
 
 缩写
+
+## 修改标题、锚点、文件名、存档后的流程
+
+修改前，要搜索并更新被引用过的地方，目录如下：
+
+- `docs\views`
+- `docs\md`
+- `avfr`（官网）
+/Users/myleslee/Documents/github/docs/md,
+/Users/myleslee/Documents/github/docs/views,
+/Users/myleslee/Documents/github/avfr
 
 ## 措词
   * `[NSNumber numberWithInt:50]` 换成 `@50`？（Parse 英文文档全部用简写格式，中文仅有 1 处）
@@ -272,7 +290,7 @@ block | block|iOS，不用翻译
 AND | [逻辑运算符](https://msdn.microsoft.com/zh-cn/library/ms189773.aspx) |
 dot notation |点操作符、点语法 |
 Primitive property types| 原始属性类型|
-dev|开发（证书）
+dev|开发（证书），测试 staging、生产 production
 
 
 ## 惯用词
@@ -283,21 +301,27 @@ LeanCloud 云端|LeanCloud 服务端|
 控制台|后台|
 APNs|APNS|[Apple Push Notification service (APNs for short)](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html)
 JSON|json|<http://json.org/>
-开发证书|测试证书|vs. 生产证书
+例如|一个简单的例子|
+Web 框架|web 框架|
 
 
 ## 其他
 - 20150416 - double spaces can be taken as linebreak (MD)
-- 深圳华强北 Hua Qiang Bei 
 - 替换变量用 大_写_字_母 加下划线表示，并加注释：  
   `cd $PROJECT_ROOT_DIR    # 请将 $PROJECT_ROOT_DIR 替换为你自己的项目根目录`  
    信息 `X-AVOSCloud-Session-Token: <sessionToken>`，该 `sessionToken` 在用户登录或注册时服务端会返回
+
+## 引用 
+
+- Demo 代码：`#L36`
+- 
 
 ## 常见问题
 
 FAQ 中的提问：用 h3 标题还是加粗？
 
 ```<div class="callout callout-info">蓝色外框</div>```
+
 <img width="849" alt="screen shot 2015-08-28 at 17 35 31" src="https://cloud.githubusercontent.com/assets/108758/9543430/5a916eac-4dab-11e5-8164-65fec24d2e9a.png">
 
 - 「的、地、得」用法

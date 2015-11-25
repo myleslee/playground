@@ -3,7 +3,7 @@
 ## 内容
 
 - 订阅更新
-- 手工定位锚点，不一定是标题，中英文均可：`<a id="customize_notification_for_offline_message" data-author="2015-11-15@myleslee@Da Li">`
+- 手工定位锚点，不一定是标题，中英文均可：`<a id="customize_notification_for_offline_message" data-author="2015-11-15@myleslee@Da Li">`，不要用 name 属性，`<a name="xxxx">`， HTML5 已经不支持。
 
 ## 结构重构
 
@@ -14,6 +14,12 @@
   - 返回原来章节
   - 定制 anchor 来定位每个段落
 - 最后更新日期（放顶部）
+- 文档链接 permanent link
+- 锚点跳转要平滑，让人知道移动的方向
+- iOS：推送和推送证书合并
+  ![content merge](images/docs_merge1.png)
+- API 加入返回 docs 的导航
+- 更新搜索返回结果的域名（现在是 cn.avoscloud.com）
 
 ### 快速入门
 
@@ -21,6 +27,9 @@
 - Step 3 的内容只能从 H4 开始（H3 有下横线）
 - 如果不登录，「选择应用」不出现（鼓励用户登录）
 - 不登录状态下 {{AppId}} 要显示为 `<APP_ID>`
+- global 选择应用的作用：
+  - 联动：入门引导（选择应用）、代码块（选择应用）
+  - 生成 blank project
 
 ## 样式
 
@@ -30,12 +39,15 @@
   2. **加粗标题二**  
     如果用下划线来取代加粗，效果就会好很多。<span style="border-bottom:1px solid #333; padding-bottom:2px">斜体仅对西文有效，中文没有斜体，但下划线是通用的</span>。另外传统的 underline 样式过于接近字体的底部，所以推荐用 border。
  
-- 加粗中的代码不要加粗：**加粗的中文与加粗的代码 `thisFunction()` 混合在一起**。 
+- 加粗中的代码不要加粗：**加粗的中文与加粗的代码 `thisFunction()`**。 
 - 图片加外边框。
 - 代码块：底色（乱）、行号、指定行加亮
-- inline-note、shy:
-- External links
+  - `a>code, h1~h6>a {background-color:inherit; alpha 为 0}`，要不让人看不清楚：[云引擎 Hook `_receiversOffline`](#_receiversOffline) 
+  - 使用 alpha，对于已经有背景色的 tag，如 `td>a`
+- note、shy、comment？a>note{background-color}
+- External links icon
 - External Reference: floating right 
+- image: align center, borderless & bordered
 
 
 ```
@@ -48,7 +60,13 @@ $ avoscloud add <APP-NAME> <APP-ID>
 
 ## 控制台
 
-- 在上方加入 docs 导航
-- 
+- 在导航加入 docs 
+
+## 2 Do
+
+- 2015-11-16 11:44 AM——realtime_rest_api.md：了解更详细的签名规则请参考 [聊天签名方法](realtime_v2.html#开启对话签名) <br/>
+  与 realtime_v2.html#用户登录的签名 的内容不一致。
+
+
 
 
