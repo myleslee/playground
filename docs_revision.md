@@ -4,15 +4,17 @@
 
 - 订阅更新
 - 手工定位锚点，不一定是标题，中英文均可：`<a id="customize_notification_for_offline_message" data-author="2015-11-15@myleslee@Da Li">`，不要用 name 属性，`<a name="xxxx">`， HTML5 已经不支持。
+- 概览合并入模板
 
 ## 结构重构
 
 - 回到顶部
   - 固定到底部
   - 平滑移动
-- 书签
+- 书签/链接
   - 返回原来章节
   - 定制 anchor 来定位每个段落
+  - 引用时不要加语言（iOS 文章内：详情请点击：iOS / OS X 关系建模指南》关系建模指南）
 - 最后更新日期（放顶部）
 - 文档链接 permanent link
 - 锚点跳转要平滑，让人知道移动的方向
@@ -20,6 +22,15 @@
   ![content merge](images/docs_merge1.png)
 - API 加入返回 docs 的导航
 - 更新搜索返回结果的域名（现在是 cn.avoscloud.com）
+- 格式自动化：
+  - 路径：`[控制台|//选择应用|存储|云引擎|LeanCache]`
+  `[控制台/<span class="text-muted">（选择应用）</span>/ **存储** / **云引擎** / **LeanCache**`
+  - 将菜单路径中的大于号（Level1 > Level 2）替换成 CSS
+  - 代码块
+    - 行号
+    - 不折行
+    - 美化缩进
+  - 
 
 ### 快速入门
 
@@ -40,14 +51,17 @@
     如果用下划线来取代加粗，效果就会好很多。<span style="border-bottom:1px solid #333; padding-bottom:2px">斜体仅对西文有效，中文没有斜体，但下划线是通用的</span>。另外传统的 underline 样式过于接近字体的底部，所以推荐用 border。
  
 - 加粗中的代码不要加粗：**加粗的中文与加粗的代码 `thisFunction()`**。 
-- 图片加外边框。
+- image
+  - bordered：图片外边框，用于没有边界的屏幕拷贝，如控制台内容。
+  - align：center, borderless & bordered
+  - resolution: @2x
 - 代码块：底色（乱）、行号、指定行加亮
   - `a>code, h1~h6>a {background-color:inherit; alpha 为 0}`，要不让人看不清楚：[云引擎 Hook `_receiversOffline`](#_receiversOffline) 
   - 使用 alpha，对于已经有背景色的 tag，如 `td>a`
-- note、shy、comment？a>note{background-color}
-- External links icon
-- External Reference: floating right 
-- image: align center, borderless & bordered
+- 备注：.text-muted
+- links：
+  - External links icon
+  - External or Internal Reference: floating right 
 
 
 ```

@@ -3,7 +3,67 @@
 
 ## Cheat Sheet
 
-- `<span style="white-space: nowrap;">`
+### 常用 CSS 样式
+
+使用 Booterstrap 框架，可参考 <http://getbootstrap.com/css/>。使用方法：`<tag class="CLASS_NAME"></tag>`（替换 CLASS_NAME）。 
+
+- `text-center`：文字居中
+- `text-nowrap`：文字不折行 `<span class="text-nowrap">`/`<code class="text-nowrap">`
+- `text-muted`：灰色显示
+-  `mark`（或 `<mark>`）：高亮显示
+- 其他文字版式：
+
+```css
+text-left
+text-right
+text-justify
+text-lowercase
+text-uppercase
+text-capitalize
+/* 颜色 */
+text-primary
+text-success
+text-info
+text-warning
+text-danger
+/* label 和 callout */
+label label-warning
+label label-success
+callout callout-danger
+callout callout-info
+```
+
+- 变量用 `<var></var>`，参见 <http://getbootstrap.com/css/#code-variables>
+- [超长表格（table-striped、table-condensed）](http://getbootstrap.com/css/#tables-responsive）：
+
+## 自定义 CSS 样式
+
+```css
+/* data-fix */
+.text-underline {
+  border-bottom: 1px solid #333; 
+  padding-bottom: 2px;" 
+}
+/* table open */
+```
+
+
+```
+<div class="table-responsive">
+  <table class="table table-hover">
+    ...
+  </table>
+</div>
+```
+
+- 图片
+```html
+<div class="center-block"><img src="..." class="img-responsive" alt="Responsive image"></div>
+```
+- 以后修复 `data-fix`
+
+### 其他
+
 - 中文不要用斜体（三个 *），表示强调用 **粗体** 和 <span style="text-decoration:'underline';">下划线</u>。
 - 软回车使用 `<br>`，不要用**两个空格**代替。<br/>
   由于编辑器的个人设置不同，如 Sublime Text（`"trim_trailing_white_space_on_save": true`）会在保存时将空白移除，这样会造成版式混乱。
@@ -12,9 +72,9 @@
   - 各级标题的 # 与文字之间加一个空格，与下面的正文内容隔一个空行。
 - 层级菜单使用 `>` 分隔，不要用 `--`、`->` 或其他字符。
   - 说明文字使用 CSS class `note` 来标注：<br/>
-    ` **控制台** ><span class="note">（选择一个应用）</span>>**存储** > **云引擎**<span class="note">（屏幕左侧）</span>`
-  - **控制台** ><span class="note" style="color:#999;">（选择一个应用）</span>> **存储** > **云引擎**<span class="note">（屏幕左侧）</span><br/>
-  - **控制台** /<span class="note" style="color:#999;">（选择一个应用）</span>/ **存储** / **云引擎**<span class="note">（屏幕左侧）</span>
+    ` **控制台** ><span class="text-muted">（选择一个应用）</span>>**存储** > **云引擎**<span class="note">（屏幕左侧）</span>`
+  - **控制台** ><span class="text-muted" style="color:#999;">（选择一个应用）</span>> **存储** > **云引擎**<span class="text-muted" style="color:#999;">（屏幕左侧）</span><br/>
+  - **控制台** /<span class="text-muted" style="color:#999;">（选择一个应用）</span>/ **存储** / **云引擎**<span class="text-muted">（屏幕左侧）</span>
 - 屏幕文字或菜单使用粗体字，不要当成代码来标注：进入 `控制台` -- `存储` -- `云引擎`。
 - 图片放在 **/images** 下，不要上传到七牛，一来便于维护，二来我们不用付费。
 - 文件夹/目录、文件名不用 `代码块` 来表示，必要时可以加粗。
@@ -30,9 +90,33 @@
   - 外部站点：`<div class="reference"></div>`
 - 代码块使用 \``` 或 \`` 来组织，不要使用 tab 或 空格。
 - AVObject 不要标为代码。
-
+- 图片质量：1x 在 Retina 显示屏上看起来很糟糕
+- 
 ## Markdown 增强
+
 - 加一些 html 属性，如 class、column width
+
+```
+<table border="1" class="">
+  <colgroup>
+    <col width="25%">
+    <col width="75%">
+  </colgroup>
+  <thead valign="bottom">
+    <tr>
+      <th class="head">Parameter</th>
+      <th class="head">Description</th>
+    </tr>
+  </thead>
+  <tbody valign="top">
+    <tr>
+      <td><tt class="docutils literal">client_id</tt></td>
+      <td>A 32 character string (public)</td>
+    </tr>
+  </tbody>
+</table>
+```
+
 - TABLE
   - 无法区分 thead，样式不明显
   - 无法使用 nowrap，文字挤在一起或错行，很不美观   
@@ -373,3 +457,10 @@ FAQ 中的提问：用 h3 标题还是加粗？
 Find|Replace|Find RE|Replace RE
 ---|---|---|---
 ##标题|## 标题|`(#{2,6})([^\s|#].)`|`\1 \2`
+
+## 写作
+
+- 避免使用可能带有主观判断的语句，如「含义很好理解」，直接阐述事实。
+  『错』这条语句的【含义很好理解】，绝大数关系型数据库都可以执行这条语句，执行的结果就是会在 Todo 表里增加一条新的数据。
+  『正』这条语句在绝大数的关系型数据库都可以执行，其结果是在 Todo 表里增加一条新数据。
+
