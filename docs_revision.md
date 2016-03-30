@@ -2,6 +2,23 @@
 
 ## 内容
 
+### 移除
+- 顶部导航菜单
+- 文档阅读指南（X）
+- 快速入门（rename 安装和初始化）
+- 功能概览（merge 各功能指南）
+- 常见问题（merge 各功能指南）
+- 常见功能提示（merge 各功能指南）
+- iOS 推送证书设置指南（merge 消息推送开发指南）
+- 崩溃报告使用指南（merge 安装和初始化）
+- CQL 查询语言详解
+- LeanCloud 开放平台接入
+- 应用之间数据共享（merge 控制台指南）
+- 离线数据分析使用指南（merge 控制台指南）
+- 用户群分析（merge 控制台指南）
+- 第三方平台账号登录开发指南（rename oauth 指南）
+
+
 - 订阅更新
 - 手工定位锚点，不一定是标题，中英文均可：`<a id="customize_notification_for_offline_message" data-author="2015-11-15@myleslee@Da Li">`，不要用 name 属性，`<a name="xxxx">`， HTML5 已经不支持。
 - 概览合并入模板
@@ -44,7 +61,7 @@
 
 ## 样式
 
-- 自定义下划线（`<em>`?）：<http://36kr.com/p/210772.html>  
+- 自定义下划线（`<u>`）：<http://36kr.com/p/210772.html>  
   1. **加粗标题一**  
     这是一个正常的段落，**但有些文字也要加粗，看起来关注层次比较乱**。
   2. **加粗标题二**  
@@ -71,6 +88,52 @@ $ avoscloud add <APP-NAME> <APP-ID>
 ```
 2015-10-12T02:04:50.179Z    dreday  将逻辑放到前端： 1 如果android，ios，web都有的话，一个逻辑做三份，严重加大了前端程序员负担 2 三个接口无法统一 3 后期逻辑更改必须重新上线
 ```
+
+## Elegant underline
+
+<http://featurejs.com/>
+
+```
+article a {
+  text-shadow: 0.05556em 0 0 #fff, 0.11111em 0 0 #fff, 0.16667em 0 0 #fff, -0.05556em 0 0 #fff, -0.11111em 0 0 #fff, -0.16667em 0 0 #fff;
+  background-image: -webkit-linear-gradient(#ff6443, #ff6443);
+  background-image: -moz-linear-gradient(#ff6443, #ff6443);
+  background-image: -ms-linear-gradient(#ff6443, #ff6443);
+  background-image: linear-gradient(#ff6443, #ff6443);
+  background-position: 0 1.11111em;
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  color: #ff6443
+}
+
+article a:hover {
+  background-image: none
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+
+.alert-warning {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+```
+
+<div class="alert alert-warning">
+                    <strong>Browser support</strong>
+                    <p>This is currently only supported on limited browsers. See <a href="http://caniuse.com/css-resize" target="_blank">Can you run it: Resize</a> for all supported browsers</p>
+                  </div>
 
 ## 控制台
 

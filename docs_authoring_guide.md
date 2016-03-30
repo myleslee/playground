@@ -2,6 +2,9 @@
 # LeanCloud 文档样式指南（增补版）
 
 ## Cheat Sheet
+- 创建后也是在 \_Conversation 表中增加一条记录，只是该记录 sys 列的值为 true
+- 文件名：We spell our file names in lower dash case (AKA "kebab case") so we don't worry about case sensitivity on the server or in source control.
+- 代码规范：iOS <http://www.iwangke.me/objc-style-guide/>
 
 ### 常用 CSS 样式
 
@@ -45,6 +48,8 @@ callout callout-info
   padding-bottom: 2px;" 
 }
 /* table open */
+{{ foo | escape }}
+{{ foo | safe }}
 ```
 
 
@@ -61,6 +66,16 @@ callout callout-info
 <div class="center-block"><img src="..." class="img-responsive" alt="Responsive image"></div>
 ```
 - 以后修复 `data-fix`
+
+- `{% block xxxxx %}{% endblock %}` 之间不要加空行
+
+```{% block code_query_province_by_city %}
+
+\```objc
+code
+\```
+{% endblock %}
+```
 
 ### 其他
 
@@ -409,6 +424,7 @@ APNs|APNS|[Apple Push Notification service (APNs for short)](https://developer.a
 JSON|json|<http://json.org/>
 例如|一个简单的例子|
 Web 框架|web 框架|
+项目|工程| Project
 
 
 ## 其他
@@ -451,6 +467,12 @@ FAQ 中的提问：用 h3 标题还是加粗？
 &check;|`&check;`|
 &middot;|`&middot;`|标注文章的层次，如：[iOS 推送指南 &middot; 清除 badge](ios_push_guide.html#清除_Badge)
 
+## 图片
+- 不要阴影
+- 尽量不要加
+- 整齐，有边框
+- 2x 高清显示，responsive
+
 
 ## 替换
 
@@ -463,4 +485,14 @@ Find|Replace|Find RE|Replace RE
 - 避免使用可能带有主观判断的语句，如「含义很好理解」，直接阐述事实。
   『错』这条语句的【含义很好理解】，绝大数关系型数据库都可以执行这条语句，执行的结果就是会在 Todo 表里增加一条新的数据。
   『正』这条语句在绝大数的关系型数据库都可以执行，其结果是在 Todo 表里增加一条新数据。
+- 【BLOG】SUN NING: 以后我们可以在这类博客上加上适用于哪个版本的 SDK，避免随着 SDK 升级有些
+内容过期对用户误导
 
+- ~~我们提供的~~定时任务的最小时间单位是秒，正常情况下~~我们都能将~~误差<new>都可以</new>控制在秒级别。
+
+- 营销类短信可以帮助开发者迅速拓张市场，并且是与潜在用户进行沟通的有效手段，~~因此 LeanCloud 特地开发了这一功能。~~》
+  营销类短信是应用开发者与潜在客户沟通、进行产品推广和销售的有效手段。
+
+- 服务端推荐使用 LeanCloud 推出的「[云引擎](https://leancloud.cn/docs/leanengine_guide-node.html)」，~~非常出色的 Node.js 环境~~。
+
+  
