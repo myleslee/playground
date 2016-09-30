@@ -347,6 +347,10 @@ var client = require('redis').createClient(process.env['REDIS_URL_<实例名称>
 登陆|登录|
 帐户|账户|
 做为|作为|
+重起|重启|
+冲值|充值|
+稍后|稍候|
+阀值|阈值|valve 开关，控制系统中的组件。threshold 临界值，测量中的信号点。
 
 
 `fetch` 系方法 fetchXXX
@@ -454,6 +458,8 @@ FAQ 中的提问：用 h3 标题还是加粗？
   - 的：名词前【例】
   - 地：动词前【例】认认真真地写
   - 得：动词/形容词**后**【例】看得清清楚楚、白得刺眼、关系处理得很好
+  - 你说的不对。What you said is wrong.（说的内容有误） 
+  - 你说得不对。You said it in a wrong way.（说的方式有问题）
 
 ## 待解决问题
 
@@ -476,9 +482,10 @@ FAQ 中的提问：用 h3 标题还是加粗？
 
 ## 替换
 
-Find|Replace|Find RE|Replace RE
----|---|---|---
-##标题|## 标题|`(#{2,6})([^\s|#].)`|`\1 \2`
+Find|Replace|Find RE|Replace RE|说明
+---|---|---|---|---
+`##标题`|`## 标题`|`(#{2,6})([^\s|#].)`|`\1 \2`|标记和文字之间要有一个空格
+`(#LeanCloud SDK)`|`(#LeanCloud_SDK)`|\(#[^\)]*\s+\)?||链接中不可以有空格
 
 ## 写作
 
